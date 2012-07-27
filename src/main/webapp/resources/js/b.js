@@ -1,6 +1,6 @@
-window.onload = windowLoad;
+addLoadEvent(windowLoadB);
 
-function windowLoad() {
+function windowLoadB() {
 	document.getElementById("p").onclick = alertp;
 }
 

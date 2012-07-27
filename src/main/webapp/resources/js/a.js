@@ -1,9 +1,23 @@
-window.onload = windowLoad;
+addLoadEvent(windowLoadA);
 
-function windowLoad() {
-	document.getElementById("h2").onclick = alerth;
+function windowLoadA() {
+	document.getElementById("h1").onclick = alerth;
+}
+
+function addLoadEvent(func) { 
+	var oldonload = window.onload; 
+	if (typeof window.onload != 'function') { 
+		window.onload = func; 
+	} else { 
+		window.onload = function() { 
+			if (oldonload) { 
+				oldonload(); 
+			} 
+			func(); 
+		} 
+	} 
 }
 
 function alerth() {
-	alert("H2!!")
+	alert("H1!!")
 }

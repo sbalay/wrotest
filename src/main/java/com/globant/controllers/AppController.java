@@ -11,7 +11,7 @@ public class AppController{
 	public AppController(){
 	}
 	
-	@RequestMapping("/")
+	@RequestMapping("/hello")
 	public String homeControl(Model model,HttpServletRequest request) {
 		model.addAttribute("helloParam","hello moto!");
 		return "hello";
